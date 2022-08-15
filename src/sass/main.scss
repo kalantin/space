@@ -1,0 +1,62 @@
+@use 'colors';
+@import 'mixins';
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	@include flex;
+	justify-content: start;
+	position: relative;
+	height: 100vh;
+	background-image: url('/src/img/assets/home/background-home-desktop.jpg');
+	background-size: cover;
+	background-position: center;
+	font-family: 'Bellefair';
+}
+.explore {
+	position: absolute;
+	bottom: 16vh;
+	right: 15%;
+	display: block;
+	color: rgb(37, 37, 37);
+	background-color: white;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	width: 14vw;
+	height: 14vw;
+	border-radius: 50%;
+	border: none;
+	transition: 0.3s;
+}
+.explore:hover {
+	cursor: pointer;
+	box-shadow: 0px 0px 0px 32px rgba(0, 0, 0, 0.16);
+}
+.heading {
+	@include flex;
+	flex-direction: column;
+	align-items: flex-start;
+	align-self: flex-end;
+	margin-left: 10vw;
+	margin-bottom: 16vh;
+	width: 350px;
+	color: rgb(190, 184, 184);
+	text-align: justify;
+	&__welcome {
+		word-spacing: 10px;
+	}
+	&__space {
+		font-size: 7rem;
+		font-weight: 400;
+		margin-bottom: 15px;
+		color: white;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+	&__text {
+		line-height: 30px;
+	}
+}
