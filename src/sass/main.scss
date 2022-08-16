@@ -9,13 +9,74 @@
 
 body {
 	@include flex;
-	justify-content: start;
+	flex-direction: column;
 	position: relative;
 	height: 100vh;
 	background-image: url('/src/img/assets/home/background-home-desktop.jpg');
 	background-size: cover;
 	background-position: center;
 	font-family: 'Bellefair';
+}
+.wrapper {
+	@include flex;
+	justify-content: start;
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	max-width: 1440px;
+}
+.nav {
+	@include flex;
+	justify-content: space-between;
+	position: relative;
+	width: 100vw;
+	height: 100px;
+	margin-top: 20px;
+	&__logo {
+		margin-left: 5%;
+	}
+	&__line {
+		position: absolute;
+		left: 15%;
+		background-color: white;
+		opacity: 0.25;
+		height: 2px;
+		width: 36%;
+	}
+	&__menu {
+		@include flex;
+		justify-content: start;
+		position: relative;
+		background-color: #9797975b;
+		// backdrop-filter: blur(81px);
+		height: 100%;
+		width: 50%;
+	}
+}
+.linkMenu {
+	@include flex;
+	height: 100%;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	font-size: 1.3rem;
+	font-family: 'Barlow Condensed', sans-serif;
+	padding: 0 10px;
+	border: 3px solid transparent;
+	transition: .3s;
+	&__number {
+		font-weight: bold;
+		margin-right: 10px;
+	}
+}
+.linkMenu:hover {
+	border-bottom: 3px solid rgba(255, 255, 255, 0.795);
+}
+.linkMenu:first-child {
+	margin-left: 10%;
+}
+.active {
+	border-bottom: 3px solid white;
 }
 .explore {
 	position: absolute;
@@ -31,17 +92,36 @@ body {
 	border-radius: 50%;
 	border: none;
 	transition: 0.3s;
-}
-.explore:hover {
 	cursor: pointer;
-	box-shadow: 0px 0px 0px 32px rgba(0, 0, 0, 0.16);
+}
+.explore:hover::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: white;
+	animation: explore .2s linear forwards;
+	z-index: -1;
+	opacity: .29;
+	filter: blur(10px);
+}
+@keyframes explore {
+	from{
+		transform: scale(0);
+	}
+	to{
+		transform: scale(1.2)
+	}
 }
 .heading {
 	@include flex;
 	flex-direction: column;
 	align-items: flex-start;
 	align-self: flex-end;
-	margin-left: 10vw;
+	margin-left: 5%;
 	margin-bottom: 16vh;
 	width: 350px;
 	color: rgb(190, 184, 184);
