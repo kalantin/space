@@ -1,14 +1,25 @@
-const moon = document.querySelector('.moon');
-const titan = document.querySelector('.titan');
-const mars = document.querySelector('.mars');
-const europa = document.querySelector('.europa');
-const buttonPlanet = document.querySelectorAll('.button')
+const content = document.querySelectorAll('.content');
+const buttonPlanet = document.querySelectorAll('.button');
 
-
-const showPlanet = () => {
-        console.log(this);
+function showPlanet() {
+	buttonPlanet.forEach(() => {
+		const name = this.textContent;
+		if (!this.classList.contains('active')) {
+			buttonPlanet.forEach((el) => {
+				el.classList.remove('active');
+			});
+			this.classList.add('active');
+			content.forEach((el) => {
+				if (el.classList.contains(name)) {
+					el.classList.add('show');
+				} else {
+					el.classList.remove('show');
+				}
+			});
+		}
+	});
 }
 
-buttonPlanet.forEach (el => {
-    el.addEventListener('click', showPlanet)
-})
+buttonPlanet.forEach((el) => {
+	el.addEventListener('click', showPlanet);
+});

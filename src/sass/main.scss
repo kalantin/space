@@ -180,16 +180,17 @@ body[data-back='dest'] nav .linkMenu:nth-child(2) {
 	@include flex;
 	align-items: start;
 	// justify-content: space-between;
-	flex-basis: 40%;
 	height: 100%;
 	color: white;
 	flex-direction: column;
+	flex-basis: 40%;
 	padding-left: 10%;
 	&__heading {
 		text-transform: uppercase;
 		font-size: 6rem;
 		font-family: 'Bellefair';
 		font-weight: 100;
+		margin-bottom: 20px;
 	}
 	&__text {
 		line-height: 30px;
@@ -219,6 +220,10 @@ body[data-back='dest'] nav .linkMenu:nth-child(2) {
 	text-transform: uppercase;
 	color: #d0d6f9;
 	cursor: pointer;
+}
+.menu{
+	align-self: flex-end;
+	// margin-right: 18.5%;
 }
 .active {
 	border-bottom: 3px solid white;
