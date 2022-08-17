@@ -159,6 +159,7 @@ body[data-back='dest'] nav .linkMenu:nth-child(2) {
 }
 .content {
 	@include flex;
+	display: none;
 }
 .welcome {
 	color: white;
@@ -233,15 +234,18 @@ body[data-back='dest'] nav .linkMenu:nth-child(2) {
 .value{
 	font-size: 2rem;
 }
-.moon{
+// .moon{
+// 	display: none;
+// }
+// .europa{
+// 	display: none;
+// }
+// .titan{
+// 	display: none;
+// }
+// .mars{
+// 	display: flex;
+// }
+.show{
 	display: flex;
-}
-.europa{
-	display: none;
-}
-.titan{
-	display: none;
-}
-.mars{
-	display: none;
 }
