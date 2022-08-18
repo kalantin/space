@@ -83,9 +83,6 @@ body {
 .linkMenu:hover {
 	border-bottom: 3px solid rgba(255, 255, 255, 0.795);
 }
-// .active {
-// 	border-bottom: 3px solid white;
-// }
 .explore {
 	position: absolute;
 	bottom: 16vh;
@@ -151,42 +148,71 @@ body {
 
 // DESTINATION PAGE
 
+// [data-dest='wrap'] {
+// 	flex-direction: column;
+// }
 [data-dest='wrap'] {
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 100px 60vh;
 }
 
 .welcome {
-	align-self: flex-start;
-		color: white;
-		text-transform: uppercase;
-		font-size: 2rem;
-		font-family: 'Barlow Condensed', sans-serif;
-		word-spacing: 3px;
-		letter-spacing: 3px;
-		padding-left: 10%;
-		margin-top: 100px;
-		margin-bottom: 50px;
-		span {
-			margin-right: 20px;
-			color: gray;
-		}
+	@include flex;
+	align-items: flex-start;
+	justify-content: start;
+	grid-column: 1/2;
+	grid-row: 1/2;
+	color: white;
+	height: 100%;
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-family: 'Barlow Condensed', sans-serif;
+	word-spacing: 3px;
+	letter-spacing: 3px;
+	// padding-left: 10%;
+	// margin-top: 100px;
+	// margin-bottom: 50px;
+	span {
+		margin-right: 20px;
+		color: gray;
 	}
-
+}
+.menu {
+	@include flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+	margin-left: 50px;
+	height: 100%;
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+.planet {
+	@include flex;
+	height: 100%;
+	display: none;
+	justify-content: center;
+	align-items: start;
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
 .content {
 	@include flex;
 	display: none;
+	justify-content: flex-start;
+	height: 100%;
 }
 .info {
 	@include flex;
-	align-items: start;
-	// justify-content: space-evenly;
-	align-self: flex-start;
+	grid-column: 2/3;
+	grid-row: 2/3;
+	align-items: flex-start;
 	height: 100%;
-	padding-left: 10%;
 	color: white;
 	flex-direction: column;
-	flex-basis: 40%;
-	&__menu{
+	flex-basis: 80%;
+	margin-left: 50px;
+	&__menu {
 		margin-bottom: 30px;
 	}
 	&__heading {
@@ -197,7 +223,8 @@ body {
 		margin-bottom: 30px;
 	}
 	&__text {
-		line-height: 30px;
+		line-height: 40px;
+		font-size: 1.5rem;
 		text-align: justify;
 		color: #d0d6f9;
 		padding-bottom: 50px;
@@ -218,6 +245,7 @@ body {
 .button {
 	background-color: transparent;
 	border: none;
+	border-bottom: 3px solid transparent;
 	padding-bottom: 10px;
 	margin-right: 20px;
 	font-size: 1rem;
@@ -226,11 +254,9 @@ body {
 	color: #d0d6f9;
 	cursor: pointer;
 }
-.menu {
-	align-self: flex-end;
-}
 .active {
 	border-bottom: 3px solid white;
+	color: white;
 }
 .avg {
 	margin-right: 50px;
