@@ -5,10 +5,6 @@ function showPlanet() {
 	buttonPlanet.forEach(() => {
 		const name = this.textContent;
 		if (!this.classList.contains('active')) {
-			buttonPlanet.forEach((el) => {
-				el.classList.remove('active');
-			});
-			this.classList.add('active');
 			content.forEach((el) => {
 				if (el.classList.contains(name)) {
 					el.classList.add('show');

@@ -20,7 +20,7 @@
 		<link rel="stylesheet" href="dist/css/main.css" />
 	</head>
 
-	<body data-back="dest">
+	<body data-dest="body">
 		<nav class="nav">
 	<img class="nav__logo" src="dist/img/assets/shared/logo.svg" alt="" />
 	<div class="nav__line"></div>
@@ -31,7 +31,7 @@
 		<a class="linkMenu" href="destination.html"
 			><span class="linkMenu__number">01</span> destination</a
 		>
-		<a class="linkMenu" href=""
+		<a class="linkMenu" href="crew.html"
 			><span class="linkMenu__number">02</span> crew</a
 		>
 		<a class="linkMenu" href=""
@@ -40,24 +40,21 @@
 	</div>
 </nav>
 
-		<div data-dest class="wrapper">
-			<div class="dest">
-				<h1 class="dest__welcome"><span>01</span> pick your destination</h1>
-				<div class="dest__menu">
-					<button class="button">moon</button>
-					<button class="button">europa</button>
-					<button class="button">titan</button>
-					<button class="button active">mars</button>
-				</div>
-			</div>
-
-			<div class="content moon">
+		<h1 class="welcome"><span>01</span> pick your destination</h1>
+		<div data-dest="wrap" class="wrapper">
+			<div class="content moon show">
 				<img
 					class="content__img moon"
 					src="/dist/img/assets/destination/image-moon.png"
 					alt=""
 				/>
 				<div class="info moon">
+					<div class="info__menu">
+						<button class="button active">moon</button>
+						<button class="button">europa</button>
+						<button class="button">titan</button>
+						<button class="button">mars</button>
+					</div>
 					<h2 class="info__heading">moon</h2>
 					<p class="info__text">
 						Don’t forget to pack your hiking boots. You’ll need them to tackle
@@ -76,13 +73,19 @@
 					</div>
 				</div>
 			</div>
-			<div class="content mars show">
+			<div class="content mars">
 				<img
 					class="content__img mars"
 					src="/dist/img/assets/destination/image-mars.png"
 					alt=""
 				/>
 				<div class="info mars">
+					<div class="info__menu">
+						<button class="button">moon</button>
+						<button class="button">europa</button>
+						<button class="button">titan</button>
+						<button class="button active">mars</button>
+					</div>
 					<h2 class="info__heading">mars</h2>
 					<p class="info__text">
 						Don’t forget to pack your hiking boots. You’ll need them to tackle
@@ -108,6 +111,12 @@
 					alt=""
 				/>
 				<div class="info titan">
+					<div class="info__menu">
+						<button class="button">moon</button>
+						<button class="button">europa</button>
+						<button class="button active">titan</button>
+						<button class="button">mars</button>
+					</div>
 					<h2 class="info__heading">titan</h2>
 					<p class="info__text">
 						The only moon known to have a dense atmosphere other than Earth,
@@ -133,6 +142,12 @@
 					alt=""
 				/>
 				<div class="info europa">
+					<div class="info__menu">
+						<button class="button">moon</button>
+						<button class="button active">europa</button>
+						<button class="button">titan</button>
+						<button class="button">mars</button>
+					</div>
 					<h2 class="info__heading">europa</h2>
 					<p class="info__text">
 						The smallest of the four Galilean moons orbiting Jupiter, Europa is
