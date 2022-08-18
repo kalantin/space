@@ -41,7 +41,16 @@
 </nav>
 
 		<div data-dest class="wrapper">
-			<h1 class="welcome"><span>01</span> pick your destination</h1>
+			<div class="dest">
+				<h1 class="dest__welcome"><span>01</span> pick your destination</h1>
+				<div class="dest__menu">
+					<button class="button">moon</button>
+					<button class="button">europa</button>
+					<button class="button">titan</button>
+					<button class="button active">mars</button>
+				</div>
+			</div>
+
 			<div class="content moon">
 				<img
 					class="content__img moon"
@@ -49,12 +58,6 @@
 					alt=""
 				/>
 				<div class="info moon">
-                    <div class="info__menu">
-                        <button class="button">moon</button>
-                        <button class="button">europa</button>
-                        <button class="button">titan</button>
-                        <button class="button active">mars</button>
-                    </div>
 					<h2 class="info__heading">moon</h2>
 					<p class="info__text">
 						Don’t forget to pack your hiking boots. You’ll need them to tackle
@@ -73,19 +76,13 @@
 					</div>
 				</div>
 			</div>
-            <div class="content mars show">
-                <img
+			<div class="content mars show">
+				<img
 					class="content__img mars"
 					src="/dist/img/assets/destination/image-mars.png"
 					alt=""
 				/>
-                <div class="info mars">
-					<div class="info__menu">
-						<button class="button">moon</button>
-						<button class="button">europa</button>
-						<button class="button">titan</button>
-						<button class="button active">mars</button>
-					</div>
+				<div class="info mars">
 					<h2 class="info__heading">mars</h2>
 					<p class="info__text">
 						Don’t forget to pack your hiking boots. You’ll need them to tackle
@@ -103,20 +100,14 @@
 						</div>
 					</div>
 				</div>
-            </div>
-            <div class="content titan">
-                <img
+			</div>
+			<div class="content titan">
+				<img
 					class="content__img titan"
 					src="/dist/img/assets/destination/image-titan.png"
 					alt=""
 				/>
-                <div class="info titan">
-					<div class="info__menu">
-						<button class="button">moon</button>
-						<button class="button">europa</button>
-						<button class="button active">titan</button>
-						<button class="button">mars</button>
-					</div>
+				<div class="info titan">
 					<h2 class="info__heading">titan</h2>
 					<p class="info__text">
 						The only moon known to have a dense atmosphere other than Earth,
@@ -134,39 +125,33 @@
 						</div>
 					</div>
 				</div>
-            </div>
-            <div class="content europa">
-                <img
-                class="content__img europa"
-                src="/dist/img/assets/destination/image-europa.png"
-                alt=""
-            />
-            <div class="info europa">
-                <div class="info__menu">
-                    <button class="button">moon</button>
-                    <button class="button active">europa</button>
-                    <button class="button">titan</button>
-                    <button class="button">mars</button>
-                </div>
-                <h2 class="info__heading">europa</h2>
-                <p class="info__text">
-                    The smallest of the four Galilean moons orbiting Jupiter, Europa is
-                    a winter lover’s dream. With an icy surface, it’s perfect for a bit
-                    of ice skating, curling, hockey, or simple relaxation in your snug
-                    wintery cabin.
-                </p>
-                <div class="info__distance">
-                    <div class="avg">
-                        <p class="name">Avg. distance</p>
-                        <p class="value">384,400 km</p>
-                    </div>
-                    <div class="time">
-                        <p class="name">Est. travel time</p>
-                        <div class="value">3 days</div>
-                    </div>
-                </div>
-            </div>
-            </div>
+			</div>
+			<div class="content europa">
+				<img
+					class="content__img europa"
+					src="/dist/img/assets/destination/image-europa.png"
+					alt=""
+				/>
+				<div class="info europa">
+					<h2 class="info__heading">europa</h2>
+					<p class="info__text">
+						The smallest of the four Galilean moons orbiting Jupiter, Europa is
+						a winter lover’s dream. With an icy surface, it’s perfect for a bit
+						of ice skating, curling, hockey, or simple relaxation in your snug
+						wintery cabin.
+					</p>
+					<div class="info__distance">
+						<div class="avg">
+							<p class="name">Avg. distance</p>
+							<p class="value">384,400 km</p>
+						</div>
+						<div class="time">
+							<p class="name">Est. travel time</p>
+							<div class="value">3 days</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<script src="/dist/js/main.js"></script>
 	</body>

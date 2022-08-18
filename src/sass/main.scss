@@ -161,52 +161,60 @@ body[data-back='dest'] nav .linkMenu:nth-child(2) {
 	@include flex;
 	display: none;
 }
-.welcome {
-	color: white;
-	text-transform: uppercase;
-	align-self: flex-start;
-	font-size: 2rem;
-	font-family: 'Barlow Condensed', sans-serif;
-	word-spacing: 3px;
-	letter-spacing: 3px;
-	margin-left: 15%;
-	margin-bottom: 10%;
-	span {
-		margin-right: 20px;
-		color: gray;
+.dest{
+	@include flex;
+	height: 20vh;
+	width: 100%;
+	&__menu {
+		align-self: flex-end;
+		padding-left: 10vw;
+		flex-basis: 40%;
+	}
+	&__welcome {
+		color: white;
+		text-transform: uppercase;
+		align-self: flex-start;
+		flex-basis: 445px;
+		font-size: 2rem;
+		font-family: 'Barlow Condensed', sans-serif;
+		word-spacing: 3px;
+		letter-spacing: 3px;
+		span {
+			margin-right: 20px;
+			color: gray;
+		}
 	}
 }
 .info {
 	@include flex;
 	align-items: start;
-	// justify-content: space-between;
+	justify-content: space-between;
 	height: 100%;
 	color: white;
 	flex-direction: column;
 	flex-basis: 40%;
-	padding-left: 10%;
+	padding-left: 10vw;
 	&__heading {
 		text-transform: uppercase;
 		font-size: 6rem;
 		font-family: 'Bellefair';
 		font-weight: 100;
-		margin-bottom: 20px;
 	}
 	&__text {
 		line-height: 30px;
 		text-align: justify;
 		color: #d0d6f9;
-		border-bottom: 1px solid #d0d6f97e;
 		padding-bottom: 50px;
 	}
-	&__menu {
-		margin-bottom: 20px;
-	}
+	
 	&__distance {
 		@include flex;
+		justify-content: start;
 		margin-top: 20px;
+		width: 100%;
 		font-size: 1.5rem;
 		text-transform: uppercase;
+		border-top: 1px solid #d0d6f97e;
 		font-family: 'Barlow Condensed', sans-serif;
 	}
 }
@@ -223,7 +231,6 @@ body[data-back='dest'] nav .linkMenu:nth-child(2) {
 }
 .menu{
 	align-self: flex-end;
-	// margin-right: 18.5%;
 }
 .active {
 	border-bottom: 3px solid white;
@@ -239,18 +246,6 @@ body[data-back='dest'] nav .linkMenu:nth-child(2) {
 .value{
 	font-size: 2rem;
 }
-// .moon{
-// 	display: none;
-// }
-// .europa{
-// 	display: none;
-// }
-// .titan{
-// 	display: none;
-// }
-// .mars{
-// 	display: flex;
-// }
 .show{
 	display: flex;
 }
