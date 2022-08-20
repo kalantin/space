@@ -20,7 +20,7 @@
 		<link rel="stylesheet" href="dist/css/main.css" />
 	</head>
 
-	<body data-dest="body">
+	<body data-body="dest">
 		<nav class="nav">
 	<img class="nav__logo" src="dist/img/assets/shared/logo.svg" alt="" />
 	<div class="nav__line"></div>
@@ -34,13 +34,13 @@
 		<a class="linkMenu" href="crew.html"
 			><span class="linkMenu__number">02</span> crew</a
 		>
-		<a class="linkMenu" href=""
+		<a class="linkMenu" href="technology.html"
 			><span class="linkMenu__number">03</span> technology</a
 		>
 	</div>
 </nav>
 
-		<div data-dest="wrap" class="wrapper">
+		<div data-wrap class="wrapper">
 			<h1 class="welcome"><span>01</span> pick your destination</h1>
 			<div class="planet moon show">
 				<img src="/dist/img/assets/destination/image-moon.png" alt="" />
@@ -56,21 +56,21 @@
 			</div>
 
 			<div class="menu">
-				<button class="button active">moon</button>
-				<button class="button">europa</button>
-				<button class="button">titan</button>
-				<button class="button">mars</button>
+				<button class="button active" id="moon">moon</button>
+				<button class="button" id="europa">europa</button>
+				<button class="button" id="titan">titan</button>
+				<button class="button" id="mars">mars</button>
 			</div>
-			<div class="content moon show">
-				<div class="info moon">
-					<h2 class="info__heading">moon</h2>
-					<p class="info__text">
+
+				<div class="description moon show">
+					<h2 class="description__heading">moon</h2>
+					<p class="description__text">
 						See our planet as you’ve never seen it before. A perfect relaxing
 						trip away to help regain perspective and come back refreshed. While
 						you’re there, take in some history by visiting the Luna 2 and Apollo
 						11 landing sites.
 					</p>
-					<div class="info__distance">
+					<div class="description__distance">
 						<div class="avg">
 							<p class="name">Avg. distance</p>
 							<p class="value">225 mil. km</p>
@@ -81,16 +81,15 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="content mars">
-				<div class="info mars">
-					<h2 class="info__heading">mars</h2>
-					<p class="info__text">
+
+				<div class="description mars">
+					<h2 class="description__heading">mars</h2>
+					<p class="description__text">
 						Don’t forget to pack your hiking boots. You’ll need them to tackle
 						Olympus Mons, the tallest planetary mountain in our solar system.
 						It’s two and a half times the size of Everest!
 					</p>
-					<div class="info__distance">
+					<div class="description__distance">
 						<div class="avg">
 							<p class="name">Avg. distance</p>
 							<p class="value">225 mil. km</p>
@@ -101,16 +100,15 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="content titan">
-				<div class="info titan">
-					<h2 class="info__heading">titan</h2>
-					<p class="info__text">
+
+				<div class="description titan">
+					<h2 class="description__heading">titan</h2>
+					<p class="description__text">
 						The only moon known to have a dense atmosphere other than Earth,
 						Titan is a home away from home (just a few hundred degrees colder!).
 						As a bonus, you get striking views of the Rings of Saturn.
 					</p>
-					<div class="info__distance">
+					<div class="description__distance">
 						<div class="avg">
 							<p class="name">Avg. distance</p>
 							<p class="value">1.6 bil. km</p>
@@ -121,17 +119,16 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="content europa">
-				<div class="info europa">
-					<h2 class="info__heading">europa</h2>
-					<p class="info__text">
+
+				<div class="description europa">
+					<h2 class="description__heading">europa</h2>
+					<p class="description__text">
 						The smallest of the four Galilean moons orbiting Jupiter, Europa is
 						a winter lover’s dream. With an icy surface, it’s perfect for a bit
 						of ice skating, curling, hockey, or simple relaxation in your snug
 						wintery cabin.
 					</p>
-					<div class="info__distance">
+					<div class="description__distance">
 						<div class="avg">
 							<p class="name">Avg. distance</p>
 							<p class="value">384,400 km</p>
@@ -142,7 +139,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+		
 		</div>
 		<script src="/dist/js/main.js"></script>
 	</body>

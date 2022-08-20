@@ -17,20 +17,22 @@ body {
 	background-position: center;
 	font-family: 'Bellefair';
 }
-[data-dest='body'] {
+[data-body="dest"] {
 	background-image: url('../img/assets/destination/background-destination-desktop.jpg');
 }
-[data-crew='body'] {
+[data-body='crew'] {
 	background-image: url('../img/assets/crew/background-crew-desktop.jpg');
+}
+[data-body='technology'] {
+	background-image: url('../img/assets/technology/background-technology-desktop.jpg');
 }
 .wrapper {
 	@include flex;
 	justify-content: start;
-	position: relative;
-	height: 100vh;
-	width: 100vw;
+	width: 80vw;
+	height: calc(100vh - 220px);
 	max-width: 1440px;
-	margin-top: 5%;
+	margin-top: 100px;
 }
 .nav {
 	@include flex;
@@ -44,18 +46,17 @@ body {
 	}
 	&__line {
 		position: absolute;
-		left: 15%;
+		left: 10%;
 		background-color: white;
 		opacity: 0.25;
 		height: 2px;
-		width: 36%;
+		width: 45%;
 	}
 	&__menu {
 		@include flex;
 		justify-content: start;
 		position: relative;
 		background-color: #9797975b;
-		// backdrop-filter: blur(81px);
 		height: 100%;
 		width: 50%;
 	}
@@ -78,7 +79,6 @@ body {
 }
 .linkMenu:first-child {
 	margin-left: 10%;
-	border-bottom: 3px solid white;
 }
 .linkMenu:hover {
 	border-bottom: 3px solid rgba(255, 255, 255, 0.795);
@@ -148,13 +148,10 @@ body {
 
 // DESTINATION PAGE
 
-// [data-dest='wrap'] {
-// 	flex-direction: column;
-// }
-[data-dest='wrap'] {
+[data-wrap] {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 100px 60vh;
+	grid-template-rows: 100px calc(100vh - 320px);
 }
 
 .welcome {
@@ -170,9 +167,6 @@ body {
 	font-family: 'Barlow Condensed', sans-serif;
 	word-spacing: 3px;
 	letter-spacing: 3px;
-	// padding-left: 10%;
-	// margin-top: 100px;
-	// margin-bottom: 50px;
 	span {
 		margin-right: 20px;
 		color: gray;
@@ -193,16 +187,15 @@ body {
 	display: none;
 	justify-content: center;
 	align-items: start;
-	grid-column: 1/2;
-	grid-row: 2/3;
 }
+
 .content {
 	@include flex;
 	display: none;
 	justify-content: flex-start;
 	height: 100%;
 }
-.info {
+.description {
 	@include flex;
 	grid-column: 2/3;
 	grid-row: 2/3;
@@ -212,19 +205,16 @@ body {
 	flex-direction: column;
 	flex-basis: 80%;
 	margin-left: 50px;
-	&__menu {
-		margin-bottom: 30px;
-	}
 	&__heading {
 		text-transform: uppercase;
 		font-size: 6rem;
 		font-family: 'Bellefair';
-		font-weight: 100;
+		font-weight: 400;
 		margin-bottom: 30px;
 	}
 	&__text {
 		line-height: 40px;
-		font-size: 1.5rem;
+		font-size: 18px;
 		text-align: justify;
 		color: #d0d6f9;
 		padding-bottom: 50px;
@@ -251,13 +241,11 @@ body {
 	font-size: 1rem;
 	font-weight: 100;
 	text-transform: uppercase;
-	color: #d0d6f9;
+	color: white;
+	opacity: 0.5;
 	cursor: pointer;
 }
-.active {
-	border-bottom: 3px solid white;
-	color: white;
-}
+
 .avg {
 	margin-right: 50px;
 }
@@ -269,6 +257,112 @@ body {
 .value {
 	font-size: 2rem;
 }
+
+// CREW
+.crew {
+	@include flex;
+	height: 100%;
+	flex-direction: column;
+	grid-column: 1/2;
+	grid-row: 2/3;
+	font-family: 'Bellefair';
+}
+.description {
+	display: none;
+	&__rank {
+		text-transform: uppercase;
+		font-size: 1.5rem;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		margin-bottom: 20px;
+		opacity: 0.5;
+	}
+	&__name {
+		text-transform: uppercase;
+		font-size: 3em;
+		margin-bottom: 20px;
+	}
+	&__text {
+		text-align: left;
+		padding-right: 30%;
+	}
+}
+.pic {
+	@include flex;
+	display: none;
+	justify-content: end;
+	height: 100%;
+	flex-direction: column;
+	grid-column: 2/3;
+	grid-row: 1/-1;
+}
+.dotMenu {
+	@include flex;
+	justify-content: start;
+	align-self: flex-start;
+	grid-column: 1/2;
+	grid-row: 2/3;
+	margin-top: 10%;
+	margin-left: 50px;
+	&__dot {
+		width: 15px;
+		height: 15px;
+		margin-right: 30px;
+		background-color: white;
+		opacity: 0.5;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+}
+.active {
+	border-bottom: 3px solid white;
+	opacity: 1;
+}
 .show {
 	display: flex;
+}
+.dotMenu {
+	&__dot {
+		border: none;
+	}
+}
+
+//TECHNOLOGY
+[data-wrap='tech'] {
+	grid-template-columns: 60% 1fr;
+}
+.technology {
+	@include flex;
+	flex-direction: row-reverse;
+}
+
+.techMenu {
+	@include flex;
+	flex-direction: column;
+	margin-right: 4vw;
+	&__dot {
+		width: 90px;
+		height: 90px;
+		background-color: transparent;
+		border-radius: 50%;
+		color: white;
+		font-size: 2rem;
+		border: 1px solid white;
+		margin-bottom: 20px;
+		cursor: pointer;
+	}
+}
+.act {
+	background-color: white;
+	color: black;
+}
+.tech {
+	padding: 0;
+}
+.ship {
+	img {
+		position: absolute;
+		right: 0;
+		margin-bottom: 100px;
+		width: 515px;
+	}
 }
